@@ -16,6 +16,7 @@ const Attendancelist = () => {
         updatedList[index].ob =!updatedList[index].ob;
         setList(updatedList);
     }
+
     return (
         <div>
             <h2>Lista obecności: </h2>
@@ -28,6 +29,10 @@ const Attendancelist = () => {
                         </li>
                     ))}
                 </ul>
+            <h2>Ilość uczniów w klasie: {list.length}</h2>
+            <h4>Obecni: {list.filter(x => x.ob).length}</h4>
+            <h4>Nieobecni: {list.filter(x => !x.ob).length}</h4>
+
         </div>
     )
 }
